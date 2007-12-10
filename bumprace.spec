@@ -1,6 +1,6 @@
 %define	name	bumprace
 %define	version	1.45
-%define release	%mkrel 10
+%define release	%mkrel 11
 
 Summary:	Drive the ship to exit
 Name:		%{name}
@@ -10,7 +10,7 @@ Source0:	http://www.linux-games.com/bumprace/bumprace-%{version}.tar.bz2
 Source5:	%{name}-16.png
 Source6:	%{name}-32.png
 Source7:	%{name}-48.png
-License:	GPL
+License:	GPLv2+
 Group:		Games/Arcade
 Url:		http://www.linux-games.com/bumprace
 BuildRequires:	SDL_mixer-devel X11-devel alsa-lib-devel esound-devel
@@ -23,16 +23,6 @@ line without crashing into deadly blocks. This game is really easy to learn!
 
 %prep
 %setup -q
-
-cat <<EOF > %{name}.menu
-?package(%{name}):command="%{_gamesbindir}/%{name}" \
-		  icon=%{name}.png \
-		  needs="x11" \
-		  section="More Applications/Games/Arcade" \
-		  title="Bumprace"\
-		  longtitle="Bumprace"\
-		  xdg="true"		
-EOF
 
 %build
 %configure --bindir=%{_gamesbindir} --datadir=%{_gamesdatadir}
@@ -52,10 +42,9 @@ Exec=%_gamesbindir/%{name}
 Icon=%{name}
 Terminal=false
 Type=Application
-Categories=Game;ArcadeGame;X-MandrivaLinux-MoreApplications-Games-Arcade;
+Categories=Game;ArcadeGame;
 EOF
 
-install -D -m644 %{name}.menu $RPM_BUILD_ROOT%{_menudir}/%{name}
 install -D -m644 %SOURCE6 $RPM_BUILD_ROOT%{_iconsdir}/%{name}.png
 install -D -m644 %SOURCE5 $RPM_BUILD_ROOT%{_miconsdir}/%{name}.png
 install -D -m644 %SOURCE7 $RPM_BUILD_ROOT%{_liconsdir}/%{name}.png
@@ -75,8 +64,6 @@ rm -rf $RPM_BUILD_ROOT
 %{_gamesbindir}/*
 %{_gamesdatadir}/%{name}
 %{_datadir}/applications/*
-%{_menudir}/*
 %{_iconsdir}/*.png
 %{_miconsdir}/*.png
 %{_liconsdir}/*.png
-
