@@ -15,6 +15,7 @@ Group:		Games/Arcade
 Url:		http://www.linux-games.com/bumprace
 BuildRequires:	SDL_mixer-devel X11-devel alsa-lib-devel esound-devel
 BuildRequires:	libjpeg-devel libpng-devel texinfo
+BuildRoot:	%{_tmppath}/%{name}-%{version}buildroot
 
 %description
 BumpRace is a simple arcade game. You've to get from the start to the finish
