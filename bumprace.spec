@@ -1,6 +1,6 @@
 %define	name	bumprace
 %define	version	1.45
-%define release	%mkrel 11
+%define release	%mkrel 13
 
 Summary:	Drive the ship to exit
 Name:		%{name}
