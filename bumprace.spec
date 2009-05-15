@@ -14,7 +14,7 @@ Source7:	%{name}-48.png
 License:	GPLv2+
 Group:		Games/Arcade
 Url:		http://www.linux-games.com/bumprace
-BuildRequires:	SDL_mixer-devel X11-devel alsa-lib-devel esound-devel
+BuildRequires:	SDL_mixer-devel SDL_image-devel X11-devel alsa-lib-devel esound-devel
 BuildRequires:	libjpeg-devel libpng-devel texinfo
 BuildRoot:	%{_tmppath}/%{name}-%{version}buildroot
 
