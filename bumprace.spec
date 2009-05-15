@@ -1,12 +1,13 @@
 %define	name	bumprace
-%define	version	1.45
-%define release	%mkrel 13
+%define	version	1.5.3
+%define release	%mkrel 1
 
 Summary:	Drive the ship to exit
 Name:		%{name}
+Epoch:		1
 Version:	%{version}
 Release:	%{release}
-Source0:	http://www.linux-games.com/bumprace/bumprace-%{version}.tar.bz2
+Source0:	http://www.linux-games.com/bumprace/bumprace-%{version}.tar.gz
 Source5:	%{name}-16.png
 Source6:	%{name}-32.png
 Source7:	%{name}-48.png
