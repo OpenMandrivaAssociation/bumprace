@@ -14,8 +14,9 @@ Source7:	%{name}-48.png
 License:	GPLv2+
 Group:		Games/Arcade
 Url:		http://www.linux-games.com/bumprace
-BuildRequires:	SDL_mixer-devel SDL_image-devel X11-devel alsa-lib-devel esound-devel
-BuildRequires:	libjpeg-devel libpng-devel texinfo
+BuildRequires:	SDL_mixer-devel
+BuildRequires:	SDL_image-dievel
+BuildRequires:	SDL-devel
 BuildRoot:	%{_tmppath}/%{name}-%{version}buildroot
 
 %description
@@ -26,7 +27,7 @@ line without crashing into deadly blocks. This game is really easy to learn!
 %setup -q
 
 %build
-%configure --bindir=%{_gamesbindir} --datadir=%{_gamesdatadir}
+%configure2_5x --bindir=%{_gamesbindir} --datadir=%{_gamesdatadir}
 %make
 
 %install
@@ -36,7 +37,6 @@ rm -rf $RPM_BUILD_ROOT
 mkdir -p $RPM_BUILD_ROOT%{_datadir}/applications
 cat > $RPM_BUILD_ROOT%{_datadir}/applications/mandriva-%{name}.desktop << EOF
 [Desktop Entry]
-Encoding=UTF-8
 Name=Bumprace
 Comment=%{summary}
 Exec=%_gamesbindir/%{name}
