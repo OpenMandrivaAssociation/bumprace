@@ -15,7 +15,7 @@ License:	GPLv2+
 Group:		Games/Arcade
 Url:		http://www.linux-games.com/bumprace
 BuildRequires:	SDL_mixer-devel
-BuildRequires:	SDL_image-dievel
+BuildRequires:	SDL_image-devel
 BuildRequires:	SDL-devel
 BuildRoot:	%{_tmppath}/%{name}-%{version}buildroot
 
