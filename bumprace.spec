@@ -13,7 +13,7 @@ Source6:	%{name}-32.png
 Source7:	%{name}-48.png
 License:	GPLv2+
 Group:		Games/Arcade
-Url:		http://www.linux-games.com/bumprace
+Url:		https://www.linux-games.com/bumprace
 BuildRequires:	SDL_mixer-devel
 BuildRequires:	SDL_image-devel
 BuildRequires:	SDL-devel
